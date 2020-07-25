@@ -17,6 +17,8 @@
 		E06745D724CC2E4B00E4A242 /* GamesResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06745D124CC2E4B00E4A242 /* GamesResults.swift */; };
 		E06745D824CC2E4B00E4A242 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06745D224CC2E4B00E4A242 /* AppGroup.swift */; };
 		E06745D924CC2E4B00E4A242 /* GamesGenres.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06745D324CC2E4B00E4A242 /* GamesGenres.swift */; };
+		E0691F9324CC8ECF00997DE2 /* HorizontalSnappingCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0691F9224CC8ECF00997DE2 /* HorizontalSnappingCollectionViewController.swift */; };
+		E0691F9524CC994600997DE2 /* BetterSnappingLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0691F9424CC994600997DE2 /* BetterSnappingLayout.swift */; };
 		E0A8824424CC10EB00482B87 /* AppsPageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8824324CC10EB00482B87 /* AppsPageCollectionViewController.swift */; };
 		E0A8824724CC117C00482B87 /* BaseListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8824624CC117C00482B87 /* BaseListCollectionViewController.swift */; };
 		E0B3EAAB24CC13FD00538810 /* AppsGroupCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B3EAAA24CC13FD00538810 /* AppsGroupCollectionViewCell.swift */; };
@@ -51,6 +53,8 @@
 		E06745D124CC2E4B00E4A242 /* GamesResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesResults.swift; sourceTree = "<group>"; };
 		E06745D224CC2E4B00E4A242 /* AppGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
 		E06745D324CC2E4B00E4A242 /* GamesGenres.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesGenres.swift; sourceTree = "<group>"; };
+		E0691F9224CC8ECF00997DE2 /* HorizontalSnappingCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalSnappingCollectionViewController.swift; sourceTree = "<group>"; };
+		E0691F9424CC994600997DE2 /* BetterSnappingLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterSnappingLayout.swift; sourceTree = "<group>"; };
 		E0A8824324CC10EB00482B87 /* AppsPageCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsPageCollectionViewController.swift; sourceTree = "<group>"; };
 		E0A8824624CC117C00482B87 /* BaseListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListCollectionViewController.swift; sourceTree = "<group>"; };
 		E0B3EAAA24CC13FD00538810 /* AppsGroupCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsGroupCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -178,6 +182,7 @@
 				E0DA935E24CBCD73005C03E2 /* UIView+Layout.swift */,
 				E0DA936024CBD12C005C03E2 /* VerticalStackView.swift */,
 				E0B3EAB024CC1D0B00538810 /* Extensions.swift */,
+				E0691F9424CC994600997DE2 /* BetterSnappingLayout.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -244,6 +249,7 @@
 				E0A8824024CC10C600482B87 /* Apps */,
 				E0FAFD7624CBB5DA00C8C685 /* BaseTabBarViewController.swift */,
 				E0A8824624CC117C00482B87 /* BaseListCollectionViewController.swift */,
+				E0691F9224CC8ECF00997DE2 /* HorizontalSnappingCollectionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -380,8 +386,10 @@
 				E06745D824CC2E4B00E4A242 /* AppGroup.swift in Sources */,
 				E0A8824724CC117C00482B87 /* BaseListCollectionViewController.swift in Sources */,
 				E041539024CC4C28004DC40F /* SocialApp.swift in Sources */,
+				E0691F9524CC994600997DE2 /* BetterSnappingLayout.swift in Sources */,
 				E0FAFD6524CBB52900C8C685 /* SceneDelegate.swift in Sources */,
 				E0DA936124CBD12C005C03E2 /* VerticalStackView.swift in Sources */,
+				E0691F9324CC8ECF00997DE2 /* HorizontalSnappingCollectionViewController.swift in Sources */,
 				E0DA936924CBE195005C03E2 /* Service.swift in Sources */,
 				E06745C924CC24F400E4A242 /* AppsHeaderHorizontalCollectionViewController.swift in Sources */,
 				E0B3EAB124CC1D0B00538810 /* Extensions.swift in Sources */,
