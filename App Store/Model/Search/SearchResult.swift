@@ -14,7 +14,7 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 import Foundation
 struct SearchResult : Codable {
 	let resultCount : Int?
-	let results : [Result]?
+	let results : [Results]?
 
 	enum CodingKeys: String, CodingKey {
 
@@ -25,7 +25,7 @@ struct SearchResult : Codable {
 	init(from decoder: Decoder) throws {
 		let values = try decoder.container(keyedBy: CodingKeys.self)
 		resultCount = try values.decodeIfPresent(Int.self, forKey: .resultCount)
-		results = try values.decodeIfPresent([Result].self, forKey: .results)
+		results = try values.decodeIfPresent([Results].self, forKey: .results)
 	}
 
 }

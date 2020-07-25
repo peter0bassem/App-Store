@@ -3,16 +3,31 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		C0FB0457922F40063A5912DB /* Pods_App_Store.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1584A86D0AE1048C295226AB /* Pods_App_Store.framework */; };
+		E041539024CC4C28004DC40F /* SocialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E041538F24CC4C28004DC40F /* SocialApp.swift */; };
+		E06745C724CC235800E4A242 /* AppsPageHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06745C624CC235800E4A242 /* AppsPageHeaderCollectionReusableView.swift */; };
+		E06745C924CC24F400E4A242 /* AppsHeaderHorizontalCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06745C824CC24F400E4A242 /* AppsHeaderHorizontalCollectionViewController.swift */; };
+		E06745CB24CC26C100E4A242 /* AppsHeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06745CA24CC26C100E4A242 /* AppsHeaderCollectionViewCell.swift */; };
+		E06745D424CC2E4B00E4A242 /* GamesAuthor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06745CE24CC2E4A00E4A242 /* GamesAuthor.swift */; };
+		E06745D624CC2E4B00E4A242 /* GamesFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06745D024CC2E4B00E4A242 /* GamesFeed.swift */; };
+		E06745D724CC2E4B00E4A242 /* GamesResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06745D124CC2E4B00E4A242 /* GamesResults.swift */; };
+		E06745D824CC2E4B00E4A242 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06745D224CC2E4B00E4A242 /* AppGroup.swift */; };
+		E06745D924CC2E4B00E4A242 /* GamesGenres.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06745D324CC2E4B00E4A242 /* GamesGenres.swift */; };
+		E0A8824424CC10EB00482B87 /* AppsPageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8824324CC10EB00482B87 /* AppsPageCollectionViewController.swift */; };
+		E0A8824724CC117C00482B87 /* BaseListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A8824624CC117C00482B87 /* BaseListCollectionViewController.swift */; };
+		E0B3EAAB24CC13FD00538810 /* AppsGroupCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B3EAAA24CC13FD00538810 /* AppsGroupCollectionViewCell.swift */; };
+		E0B3EAAD24CC169000538810 /* AppsHorizontalCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B3EAAC24CC169000538810 /* AppsHorizontalCollectionViewController.swift */; };
+		E0B3EAAF24CC1C6500538810 /* AppRowCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B3EAAE24CC1C6500538810 /* AppRowCollectionViewCell.swift */; };
+		E0B3EAB124CC1D0B00538810 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B3EAB024CC1D0B00538810 /* Extensions.swift */; };
 		E0DA935B24CBC6E5005C03E2 /* SearchResultCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DA935A24CBC6E5005C03E2 /* SearchResultCollectionViewCell.swift */; };
 		E0DA935F24CBCD73005C03E2 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DA935E24CBCD73005C03E2 /* UIView+Layout.swift */; };
 		E0DA936124CBD12C005C03E2 /* VerticalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DA936024CBD12C005C03E2 /* VerticalStackView.swift */; };
 		E0DA936424CBD9FF005C03E2 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DA936324CBD9FF005C03E2 /* SearchResult.swift */; };
-		E0DA936624CBDA05005C03E2 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DA936524CBDA05005C03E2 /* Result.swift */; };
+		E0DA936624CBDA05005C03E2 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DA936524CBDA05005C03E2 /* Results.swift */; };
 		E0DA936924CBE195005C03E2 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DA936824CBE195005C03E2 /* Service.swift */; };
 		E0FAFD6324CBB52900C8C685 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FAFD6224CBB52900C8C685 /* AppDelegate.swift */; };
 		E0FAFD6524CBB52900C8C685 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FAFD6424CBB52900C8C685 /* SceneDelegate.swift */; };
@@ -27,11 +42,26 @@
 /* Begin PBXFileReference section */
 		1584A86D0AE1048C295226AB /* Pods_App_Store.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App_Store.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18D9506E54229D7C13D33E14 /* Pods-App Store.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App Store.release.xcconfig"; path = "Target Support Files/Pods-App Store/Pods-App Store.release.xcconfig"; sourceTree = "<group>"; };
+		E041538F24CC4C28004DC40F /* SocialApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialApp.swift; sourceTree = "<group>"; };
+		E06745C624CC235800E4A242 /* AppsPageHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsPageHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		E06745C824CC24F400E4A242 /* AppsHeaderHorizontalCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsHeaderHorizontalCollectionViewController.swift; sourceTree = "<group>"; };
+		E06745CA24CC26C100E4A242 /* AppsHeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsHeaderCollectionViewCell.swift; sourceTree = "<group>"; };
+		E06745CE24CC2E4A00E4A242 /* GamesAuthor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesAuthor.swift; sourceTree = "<group>"; };
+		E06745D024CC2E4B00E4A242 /* GamesFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesFeed.swift; sourceTree = "<group>"; };
+		E06745D124CC2E4B00E4A242 /* GamesResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesResults.swift; sourceTree = "<group>"; };
+		E06745D224CC2E4B00E4A242 /* AppGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
+		E06745D324CC2E4B00E4A242 /* GamesGenres.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesGenres.swift; sourceTree = "<group>"; };
+		E0A8824324CC10EB00482B87 /* AppsPageCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsPageCollectionViewController.swift; sourceTree = "<group>"; };
+		E0A8824624CC117C00482B87 /* BaseListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListCollectionViewController.swift; sourceTree = "<group>"; };
+		E0B3EAAA24CC13FD00538810 /* AppsGroupCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsGroupCollectionViewCell.swift; sourceTree = "<group>"; };
+		E0B3EAAC24CC169000538810 /* AppsHorizontalCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsHorizontalCollectionViewController.swift; sourceTree = "<group>"; };
+		E0B3EAAE24CC1C6500538810 /* AppRowCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRowCollectionViewCell.swift; sourceTree = "<group>"; };
+		E0B3EAB024CC1D0B00538810 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E0DA935A24CBC6E5005C03E2 /* SearchResultCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCollectionViewCell.swift; sourceTree = "<group>"; };
 		E0DA935E24CBCD73005C03E2 /* UIView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
 		E0DA936024CBD12C005C03E2 /* VerticalStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalStackView.swift; sourceTree = "<group>"; };
 		E0DA936324CBD9FF005C03E2 /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
-		E0DA936524CBDA05005C03E2 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		E0DA936524CBDA05005C03E2 /* Results.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
 		E0DA936824CBE195005C03E2 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		E0FAFD5F24CBB52900C8C685 /* App Store.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App Store.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0FAFD6224CBB52900C8C685 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,13 +102,71 @@
 				F5F1F409E263253375E96D3E /* Pods-App Store.debug.xcconfig */,
 				18D9506E54229D7C13D33E14 /* Pods-App Store.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E041538E24CC4C18004DC40F /* SocialApp */ = {
+			isa = PBXGroup;
+			children = (
+				E041538F24CC4C28004DC40F /* SocialApp.swift */,
+			);
+			path = SocialApp;
+			sourceTree = "<group>";
+		};
+		E06745CC24CC2E1A00E4A242 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				E0DA936324CBD9FF005C03E2 /* SearchResult.swift */,
+				E0DA936524CBDA05005C03E2 /* Results.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		E06745CD24CC2E2700E4A242 /* Apps */ = {
+			isa = PBXGroup;
+			children = (
+				E06745D224CC2E4B00E4A242 /* AppGroup.swift */,
+				E06745D024CC2E4B00E4A242 /* GamesFeed.swift */,
+				E06745CE24CC2E4A00E4A242 /* GamesAuthor.swift */,
+				E06745D124CC2E4B00E4A242 /* GamesResults.swift */,
+				E06745D324CC2E4B00E4A242 /* GamesGenres.swift */,
+			);
+			path = Apps;
+			sourceTree = "<group>";
+		};
+		E0A8824024CC10C600482B87 /* Apps */ = {
+			isa = PBXGroup;
+			children = (
+				E0A8824324CC10EB00482B87 /* AppsPageCollectionViewController.swift */,
+				E0B3EAAC24CC169000538810 /* AppsHorizontalCollectionViewController.swift */,
+				E06745C824CC24F400E4A242 /* AppsHeaderHorizontalCollectionViewController.swift */,
+			);
+			path = Apps;
+			sourceTree = "<group>";
+		};
+		E0A8824824CC11DB00482B87 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				E0FAFD7924CBC13A00C8C685 /* AppsSearchCollectionViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		E0B3EAA924CC13E000538810 /* Apps */ = {
+			isa = PBXGroup;
+			children = (
+				E0B3EAAA24CC13FD00538810 /* AppsGroupCollectionViewCell.swift */,
+				E0B3EAAE24CC1C6500538810 /* AppRowCollectionViewCell.swift */,
+				E06745C624CC235800E4A242 /* AppsPageHeaderCollectionReusableView.swift */,
+				E06745CA24CC26C100E4A242 /* AppsHeaderCollectionViewCell.swift */,
+			);
+			path = Apps;
 			sourceTree = "<group>";
 		};
 		E0DA935924CBC6B7005C03E2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E0B3EAA924CC13E000538810 /* Apps */,
 				E0DA935A24CBC6E5005C03E2 /* SearchResultCollectionViewCell.swift */,
 			);
 			path = Views;
@@ -89,6 +177,7 @@
 			children = (
 				E0DA935E24CBCD73005C03E2 /* UIView+Layout.swift */,
 				E0DA936024CBD12C005C03E2 /* VerticalStackView.swift */,
+				E0B3EAB024CC1D0B00538810 /* Extensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -96,8 +185,9 @@
 		E0DA936224CBD9F3005C03E2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E0DA936324CBD9FF005C03E2 /* SearchResult.swift */,
-				E0DA936524CBDA05005C03E2 /* Result.swift */,
+				E06745CC24CC2E1A00E4A242 /* Search */,
+				E06745CD24CC2E2700E4A242 /* Apps */,
+				E041538E24CC4C18004DC40F /* SocialApp */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -150,8 +240,10 @@
 		E0FAFD7824CBC0D400C8C685 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E0A8824824CC11DB00482B87 /* Search */,
+				E0A8824024CC10C600482B87 /* Apps */,
 				E0FAFD7624CBB5DA00C8C685 /* BaseTabBarViewController.swift */,
-				E0FAFD7924CBC13A00C8C685 /* AppsSearchCollectionViewController.swift */,
+				E0A8824624CC117C00482B87 /* BaseListCollectionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -275,11 +367,26 @@
 				E0DA936424CBD9FF005C03E2 /* SearchResult.swift in Sources */,
 				E0DA935B24CBC6E5005C03E2 /* SearchResultCollectionViewCell.swift in Sources */,
 				E0FAFD6724CBB52900C8C685 /* ViewController.swift in Sources */,
-				E0DA936624CBDA05005C03E2 /* Result.swift in Sources */,
+				E06745D724CC2E4B00E4A242 /* GamesResults.swift in Sources */,
+				E0A8824424CC10EB00482B87 /* AppsPageCollectionViewController.swift in Sources */,
+				E0DA936624CBDA05005C03E2 /* Results.swift in Sources */,
+				E0B3EAAD24CC169000538810 /* AppsHorizontalCollectionViewController.swift in Sources */,
+				E06745D624CC2E4B00E4A242 /* GamesFeed.swift in Sources */,
+				E0B3EAAB24CC13FD00538810 /* AppsGroupCollectionViewCell.swift in Sources */,
 				E0FAFD6324CBB52900C8C685 /* AppDelegate.swift in Sources */,
+				E06745CB24CC26C100E4A242 /* AppsHeaderCollectionViewCell.swift in Sources */,
+				E06745C724CC235800E4A242 /* AppsPageHeaderCollectionReusableView.swift in Sources */,
+				E0B3EAAF24CC1C6500538810 /* AppRowCollectionViewCell.swift in Sources */,
+				E06745D824CC2E4B00E4A242 /* AppGroup.swift in Sources */,
+				E0A8824724CC117C00482B87 /* BaseListCollectionViewController.swift in Sources */,
+				E041539024CC4C28004DC40F /* SocialApp.swift in Sources */,
 				E0FAFD6524CBB52900C8C685 /* SceneDelegate.swift in Sources */,
 				E0DA936124CBD12C005C03E2 /* VerticalStackView.swift in Sources */,
 				E0DA936924CBE195005C03E2 /* Service.swift in Sources */,
+				E06745C924CC24F400E4A242 /* AppsHeaderHorizontalCollectionViewController.swift in Sources */,
+				E0B3EAB124CC1D0B00538810 /* Extensions.swift in Sources */,
+				E06745D424CC2E4B00E4A242 /* GamesAuthor.swift in Sources */,
+				E06745D924CC2E4B00E4A242 /* GamesGenres.swift in Sources */,
 				E0DA935F24CBCD73005C03E2 /* UIView+Layout.swift in Sources */,
 				E0FAFD7724CBB5DA00C8C685 /* BaseTabBarViewController.swift in Sources */,
 			);

@@ -54,7 +54,7 @@ class SearchResultCollectionViewCell: UICollectionViewCell {
     private lazy var screenshot2ImageView = self.createScreenshotImageView()
     private lazy var screenshot3ImageView = self.createScreenshotImageView()
     
-    var appResult: Result! {
+    var appResult: Results! {
         didSet {
             guard let appIconUrl = URL(string: appResult.artworkUrl100 ?? "") else { return }
             appIconImageView.sd_setImage(with: appIconUrl)
@@ -101,12 +101,5 @@ class SearchResultCollectionViewCell: UICollectionViewCell {
         imageView.layer.borderColor = UIColor(white: 0.5, alpha: 0.5).cgColor
         imageView.contentMode = .scaleAspectFill
         return imageView
-    }
-}
-
-extension Double {
-    func roundToPlaces(places:Int) -> Double {
-        let divisor = pow(10.0, Double(places))
-        return (self * divisor).rounded() / divisor
     }
 }

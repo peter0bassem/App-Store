@@ -8,9 +8,9 @@
 
 import UIKit
 
-class AppsSearchCollectionViewController: UICollectionViewController {
+class AppsSearchCollectionViewController: BaseListCollectionViewController {
     
-    private var appResults = [Result]()
+    private var appResults = [Results]()
     
     private let searchController = UISearchController(searchResultsController: nil)
     private lazy var enterSearchTermLabel: UILabel = {
@@ -25,27 +25,21 @@ class AppsSearchCollectionViewController: UICollectionViewController {
     
     var timer: Timer?
     
-    init() {
-        super.init(collectionViewLayout: UICollectionViewFlowLayout())
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         collectionView.backgroundColor = .white
         collectionView.register(SearchResultCollectionViewCell.self, forCellWithReuseIdentifier: SearchResultCollectionViewCell.identifier)
+        collectionView.keyboardDismissMode = .onDrag
+        collectionView.showsVerticalScrollIndicator = false
         
         collectionView.addSubview(enterSearchTermLabel)
         enterSearchTermLabel.fillSuperview(padding: .init(top: 100, left: 50, bottom: 0, right: 50))
         enterSearchTermLabel.centerXAnchor.constraint(equalTo: collectionView.centerXAnchor).isActive = true
-     
+        
         setupSearchBar()
-//        fetchItunesApps(searchItem: "Twitter")
+        //        fetchItunesApps(searchItem: "Twitter")
     }
     
     private func setupSearchBar() {
@@ -58,16 +52,21 @@ class AppsSearchCollectionViewController: UICollectionViewController {
     }
     
     private func fetchItunesApps(searchItem: String) {
-        Service.shared.fetchApps(searchItem: searchItem) { [weak self] (results, error) in
-            if let error = error as? ServiceError {
-                switch error {
+        Service.shared.fetchApps(searchItem: searchItem) { [weak self] (searchResults, serviceError) in
+            if let serviceError = serviceError {
+                switch serviceError {
                 case .failedToFetchData(let error):
                     print("Failed to fetch data:", error)
                 case .decodeError(let error):
                     print("decoding error:", error)
                 }
             }
-            guard let results = results, !results.isEmpty else { return }
+            guard let results = searchResults?.results, !results.isEmpty else {
+                DispatchQueue.main.async {
+                    self?.enterSearchTermLabel.text = "No Results avalilable."
+                }
+                return
+            }
             self?.appResults = results
             DispatchQueue.main.async {
                 self?.enterSearchTermLabel.text = nil

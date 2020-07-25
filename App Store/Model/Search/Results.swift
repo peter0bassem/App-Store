@@ -12,7 +12,7 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 */
 
 import Foundation
-struct Result : Codable {
+struct Results : Codable {
 	let isGameCenterEnabled : Bool?
 	let screenshotUrls : [String]?
 	let ipadScreenshotUrls : [String]?
