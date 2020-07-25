@@ -14,6 +14,7 @@
 		E0FAFD6C24CBB52E00C8C685 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0FAFD6B24CBB52E00C8C685 /* Assets.xcassets */; };
 		E0FAFD6F24CBB52E00C8C685 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0FAFD6D24CBB52E00C8C685 /* LaunchScreen.storyboard */; };
 		E0FAFD7724CBB5DA00C8C685 /* BaseTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FAFD7624CBB5DA00C8C685 /* BaseTabBarViewController.swift */; };
+		E0FAFD7A24CBC13A00C8C685 /* AppsSearchCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FAFD7924CBC13A00C8C685 /* AppsSearchCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		E0FAFD6E24CBB52E00C8C685 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E0FAFD7024CBB52E00C8C685 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0FAFD7624CBB5DA00C8C685 /* BaseTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarViewController.swift; sourceTree = "<group>"; };
+		E0FAFD7924CBC13A00C8C685 /* AppsSearchCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsSearchCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		E0FAFD6124CBB52900C8C685 /* App Store */ = {
 			isa = PBXGroup;
 			children = (
+				E0FAFD7824CBC0D400C8C685 /* Controller */,
 				E0FAFD6224CBB52900C8C685 /* AppDelegate.swift */,
 				E0FAFD6424CBB52900C8C685 /* SceneDelegate.swift */,
 				E0FAFD6624CBB52900C8C685 /* ViewController.swift */,
@@ -65,9 +68,17 @@
 				E0FAFD6B24CBB52E00C8C685 /* Assets.xcassets */,
 				E0FAFD6D24CBB52E00C8C685 /* LaunchScreen.storyboard */,
 				E0FAFD7024CBB52E00C8C685 /* Info.plist */,
-				E0FAFD7624CBB5DA00C8C685 /* BaseTabBarViewController.swift */,
 			);
 			path = "App Store";
+			sourceTree = "<group>";
+		};
+		E0FAFD7824CBC0D400C8C685 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E0FAFD7624CBB5DA00C8C685 /* BaseTabBarViewController.swift */,
+				E0FAFD7924CBC13A00C8C685 /* AppsSearchCollectionViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0FAFD7A24CBC13A00C8C685 /* AppsSearchCollectionViewController.swift in Sources */,
 				E0FAFD6724CBB52900C8C685 /* ViewController.swift in Sources */,
 				E0FAFD6324CBB52900C8C685 /* AppDelegate.swift in Sources */,
 				E0FAFD6524CBB52900C8C685 /* SceneDelegate.swift in Sources */,
