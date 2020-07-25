@@ -23,7 +23,7 @@ class BaseTabBarViewController: UITabBarController {
         ]
     }
     
-    fileprivate func createNavigationController(viewController: UIViewController, title: String, imageName: String) -> UINavigationController {
+    private func createNavigationController(viewController: UIViewController, title: String, imageName: String) -> UINavigationController {
         viewController.title = title
         viewController.view.backgroundColor = .white
         let navigationController = UINavigationController(rootViewController: viewController)

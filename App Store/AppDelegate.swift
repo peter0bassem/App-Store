@@ -21,7 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             appearance.backgroundColor = .white
             appearance.titleTextAttributes = [.foregroundColor: UIColor.black]
             appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.black]
-
+            appearance.configureWithDefaultBackground()
+            
+//            let attributes:[NSAttributedString.Key: Any] = [.foregroundColor: UIColor.link]
+//            UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).setTitleTextAttributes(attributes, for: .normal)
+            
             UINavigationBar.appearance().tintColor = .white
             UINavigationBar.appearance().standardAppearance = appearance
             UINavigationBar.appearance().compactAppearance = appearance

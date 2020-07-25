@@ -10,9 +10,20 @@ import UIKit
 
 class AppsSearchCollectionViewController: UICollectionViewController {
     
-    fileprivate let cellId = "id1234"
-    
     private var appResults = [Result]()
+    
+    private let searchController = UISearchController(searchResultsController: nil)
+    private lazy var enterSearchTermLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Please enter search item above"
+        label.textAlignment = .center
+        label.numberOfLines = 2
+        label.lineBreakMode = .byWordWrapping
+        label.font = .systemFont(ofSize: 20, weight: .bold)
+        return label
+    }()
+    
+    var timer: Timer?
     
     init() {
         super.init(collectionViewLayout: UICollectionViewFlowLayout())
@@ -27,26 +38,39 @@ class AppsSearchCollectionViewController: UICollectionViewController {
 
         // Do any additional setup after loading the view.
         collectionView.backgroundColor = .white
-        collectionView.register(SearchResultCollectionViewCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView.register(SearchResultCollectionViewCell.self, forCellWithReuseIdentifier: SearchResultCollectionViewCell.identifier)
         
-        fetchItunesApps()
+        collectionView.addSubview(enterSearchTermLabel)
+        enterSearchTermLabel.fillSuperview(padding: .init(top: 100, left: 50, bottom: 0, right: 50))
+        enterSearchTermLabel.centerXAnchor.constraint(equalTo: collectionView.centerXAnchor).isActive = true
+     
+        setupSearchBar()
+//        fetchItunesApps(searchItem: "Twitter")
     }
     
-    // 2 - Extract this function `fetchItunesApps()` outside of this controller file
+    private func setupSearchBar() {
+        definesPresentationContext = true
+        searchController.searchBar.tintColor = view.tintColor
+        searchController.obscuresBackgroundDuringPresentation  = false
+        searchController.searchBar.delegate = self
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+    }
     
-    fileprivate func fetchItunesApps() {
-        Service.shared.fetchApps { [weak self] (reults, error) in
+    private func fetchItunesApps(searchItem: String) {
+        Service.shared.fetchApps(searchItem: searchItem) { [weak self] (results, error) in
             if let error = error as? ServiceError {
                 switch error {
-                case .failedToFetchData(_):
-                    print("Faile to fetch data:")
-                case .decodeError(_):
-                    print("decoding error")
+                case .failedToFetchData(let error):
+                    print("Failed to fetch data:", error)
+                case .decodeError(let error):
+                    print("decoding error:", error)
                 }
             }
-            guard let reults = reults else { return }
-            self?.appResults = reults
+            guard let results = results, !results.isEmpty else { return }
+            self?.appResults = results
             DispatchQueue.main.async {
+                self?.enterSearchTermLabel.text = nil
                 self?.collectionView.reloadData()
             }
         }
@@ -61,7 +85,7 @@ extension AppsSearchCollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for:
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SearchResultCollectionViewCell.identifier, for:
             indexPath) as! SearchResultCollectionViewCell
         cell.appResult = appResults[indexPath.item]
         return cell
@@ -73,5 +97,17 @@ extension AppsSearchCollectionViewController: UICollectionViewDelegateFlowLayout
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.size.width, height: 350)
+    }
+}
+
+//MARK: - UISearchBarDelegate
+extension AppsSearchCollectionViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        timer?.invalidate()
+        timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { [weak self] (_) in
+            self?.searchController.searchBar.endEditing(true)
+            self?.fetchItunesApps(searchItem: searchText)
+        }
     }
 }

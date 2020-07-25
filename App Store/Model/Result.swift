@@ -53,7 +53,7 @@ struct Result : Codable {
 	let artistId : Int?
 	let artistName : String?
 	let genres : [String]?
-	let price : Int?
+	let price : Double?
 	let description : String?
 	let bundleId : String?
 	let userRatingCount : Int?
@@ -148,7 +148,7 @@ struct Result : Codable {
 		artistId = try values.decodeIfPresent(Int.self, forKey: .artistId)
 		artistName = try values.decodeIfPresent(String.self, forKey: .artistName)
 		genres = try values.decodeIfPresent([String].self, forKey: .genres)
-		price = try values.decodeIfPresent(Int.self, forKey: .price)
+		price = try values.decodeIfPresent(Double.self, forKey: .price)
 		description = try values.decodeIfPresent(String.self, forKey: .description)
 		bundleId = try values.decodeIfPresent(String.self, forKey: .bundleId)
 		userRatingCount = try values.decodeIfPresent(Int.self, forKey: .userRatingCount)
