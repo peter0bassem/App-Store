@@ -9,10 +9,6 @@
 import UIKit
 
 class BaseTabBarViewController: UITabBarController {
-    
-    /*
-     3 - maybe introduce AppSearchController
-     */
 
     override func viewDidLoad() {
         super.viewDidLoad()
