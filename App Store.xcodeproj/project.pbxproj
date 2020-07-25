@@ -13,6 +13,7 @@
 		E0FAFD6A24CBB52900C8C685 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0FAFD6824CBB52900C8C685 /* Main.storyboard */; };
 		E0FAFD6C24CBB52E00C8C685 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0FAFD6B24CBB52E00C8C685 /* Assets.xcassets */; };
 		E0FAFD6F24CBB52E00C8C685 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0FAFD6D24CBB52E00C8C685 /* LaunchScreen.storyboard */; };
+		E0FAFD7724CBB5DA00C8C685 /* BaseTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FAFD7624CBB5DA00C8C685 /* BaseTabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E0FAFD6B24CBB52E00C8C685 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0FAFD6E24CBB52E00C8C685 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E0FAFD7024CBB52E00C8C685 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0FAFD7624CBB5DA00C8C685 /* BaseTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				E0FAFD6B24CBB52E00C8C685 /* Assets.xcassets */,
 				E0FAFD6D24CBB52E00C8C685 /* LaunchScreen.storyboard */,
 				E0FAFD7024CBB52E00C8C685 /* Info.plist */,
+				E0FAFD7624CBB5DA00C8C685 /* BaseTabBarViewController.swift */,
 			);
 			path = "App Store";
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				E0FAFD6724CBB52900C8C685 /* ViewController.swift in Sources */,
 				E0FAFD6324CBB52900C8C685 /* AppDelegate.swift in Sources */,
 				E0FAFD6524CBB52900C8C685 /* SceneDelegate.swift in Sources */,
+				E0FAFD7724CBB5DA00C8C685 /* BaseTabBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
