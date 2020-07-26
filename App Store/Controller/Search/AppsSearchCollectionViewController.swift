@@ -89,6 +89,11 @@ extension AppsSearchCollectionViewController {
         cell.appResult = appResults[indexPath.item]
         return cell
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let appDetailsCollectionViewController = AppDetailsCollectionViewController(appId: String(appResults[indexPath.item].trackId ?? 0))
+        navigationController?.pushViewController(appDetailsCollectionViewController, animated: true)
+    }
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout

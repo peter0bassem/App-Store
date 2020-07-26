@@ -15,6 +15,9 @@ class AppsHorizontalCollectionViewController: HorizontalSnappingCollectionViewCo
     
     var appGroup: AppGroup?
     
+    var selectedIndex: Int!
+    var didSelectHandler: ((GamesResults) -> Void)?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -37,6 +40,12 @@ extension AppsHorizontalCollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AppRowCollectionViewCell.identifer, for: indexPath) as! AppRowCollectionViewCell
         cell.result = appGroup?.feed?.results?[indexPath.item]
         return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let containerView = view.superview as? AppsGroupCollectionViewCell {
+            containerView.selectedIndex = indexPath.item
+        }
     }
 }
 

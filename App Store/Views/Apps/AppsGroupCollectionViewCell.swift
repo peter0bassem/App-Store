@@ -23,6 +23,14 @@ class AppsGroupCollectionViewCell: UICollectionViewCell {
             horizontalViewController.collectionView.reloadData()
         }
     }
+    var selectedIndex: Int! {
+        didSet {
+            guard let selectedIndex = selectedIndex, let feedResult = appGroup?.feed?.results?[selectedIndex] else { return }
+            didSelection?(feedResult)
+            horizontalViewController.didSelectHandler = didSelection
+        }
+    }
+    var didSelection: ((GamesResults) -> Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -32,7 +40,6 @@ class AppsGroupCollectionViewCell: UICollectionViewCell {
         
         addSubview(horizontalViewController.view)
         horizontalViewController.view.anchor(top: titleLabel.bottomAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor)
-        
     }
     
     required init?(coder: NSCoder) {

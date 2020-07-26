@@ -46,7 +46,6 @@ class AppsPageCollectionViewController: BaseListCollectionViewController {
         
         dispatchGroup.enter()
         Service.shared.fetchGames { (appGroup, error) in
-            print("done with games")
             dispatchGroup.leave()
             if let error = error {
                 switch error {
@@ -61,7 +60,6 @@ class AppsPageCollectionViewController: BaseListCollectionViewController {
         
         dispatchGroup.enter()
         Service.shared.fetchTopGrossing { (appGroup, error) in
-            print("done with top grossing")
             dispatchGroup.leave()
             if let error = error {
                 switch error {
@@ -76,7 +74,6 @@ class AppsPageCollectionViewController: BaseListCollectionViewController {
         
         dispatchGroup.enter()
         Service.shared.fetchTopFree { (appGroup, error) in
-            print("done with top free")
             dispatchGroup.leave()
             if let error = error {
                 switch error {
@@ -107,7 +104,6 @@ class AppsPageCollectionViewController: BaseListCollectionViewController {
         
         //completion
         dispatchGroup.notify(queue: .main) { [weak self] in
-            print("completed your dispatch group tasks...")
             if let group = group1 {
                 self?.groups.append(group)
             }
@@ -144,9 +140,17 @@ extension AppsPageCollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AppsGroupCollectionViewCell.identifer, for: indexPath) as! AppsGroupCollectionViewCell
-//        cell.feed = editorsChoiceGames?.feed
         cell.appGroup = groups[indexPath.item]
+        cell.didSelection = { [weak self] feedResult in
+            let appDetailsCollectionViewController = AppDetailsCollectionViewController(appId: feedResult.id ?? "")
+            appDetailsCollectionViewController.title = feedResult.name ?? ""
+            self?.navigationController?.pushViewController(appDetailsCollectionViewController, animated: true)
+        }
         return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
     }
 }
 

@@ -33,6 +33,8 @@ class AppRowCollectionViewCell: UICollectionViewCell {
         imageView.constrainWidth(constant: 64)
         imageView.constrainHeight(constant: 64)
         
+        companyLabel.textColor = .lightGray
+        
         getButton.constrainWidth(constant: 80)
         getButton.constrainHeight(constant: 32)
         getButton.layer.cornerRadius = 32 / 2
