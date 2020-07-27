@@ -16,7 +16,7 @@ class BaseTabBarViewController: UITabBarController {
         // Do any additional setup after loading the view.
         
         viewControllers = [
-            
+            createNavigationController(viewController: MusicCollectionViewController(), title: "Music", imageName: "music"),
             createNavigationController(viewController: TodayCollectionViewController(), title: "Today", imageName: "today_icon"),
             createNavigationController(viewController: AppsPageCollectionViewController(), title: "Apps", imageName: "apps"),
             createNavigationController(viewController: AppsSearchCollectionViewController(), title: "Search", imageName: "search")

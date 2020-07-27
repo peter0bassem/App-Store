@@ -57,6 +57,7 @@ struct Results : Codable {
 	let description : String?
 	let bundleId : String?
 	let userRatingCount : Int?
+    let collectionName : String?
 
 	enum CodingKeys: String, CodingKey {
 
@@ -104,6 +105,7 @@ struct Results : Codable {
 		case description = "description"
 		case bundleId = "bundleId"
 		case userRatingCount = "userRatingCount"
+        case collectionName = "collectionName"
 	}
 
 	init(from decoder: Decoder) throws {
@@ -152,6 +154,7 @@ struct Results : Codable {
 		description = try values.decodeIfPresent(String.self, forKey: .description)
 		bundleId = try values.decodeIfPresent(String.self, forKey: .bundleId)
 		userRatingCount = try values.decodeIfPresent(Int.self, forKey: .userRatingCount)
+        collectionName = try values.decodeIfPresent(String.self, forKey: .collectionName)
 	}
 
 }
