@@ -46,12 +46,12 @@ class Service {
     }
     
     func fetchTopGrossing(completion: @escaping (_ appGroup: AppGroup?, _ error: ServiceError?) -> Void) {
-        let urlString = "https://rss.itunes.apple.com/api/v1/eg/ios-apps/new-games-we-love/all/50/explicit.json"
+        let urlString = "https://rss.itunes.apple.com/api/v1/eg/ios-apps/top-grossing/all/25/explicit.json"
         fetchAppGroup(urlString: urlString, completion: completion)
     }
     
     func fetchGames(completion: @escaping (_ appGroup: AppGroup?, _ error: ServiceError?) -> Void) {
-        fetchAppGroup(urlString: "https://rss.itunes.apple.com/api/v1/eg/ios-apps/top-grossing/all/25/explicit.json", completion: completion)
+        fetchAppGroup(urlString: "https://rss.itunes.apple.com/api/v1/eg/ios-apps/new-games-we-love/all/50/explicit.json", completion: completion)
     }
     
     func fetchTopFree(completion: @escaping (_ appGroup: AppGroup?, _ error: ServiceError?) -> Void) {
