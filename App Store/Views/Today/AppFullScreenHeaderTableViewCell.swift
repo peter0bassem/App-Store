@@ -38,6 +38,18 @@ class AppFullScreenHeaderTableViewCell: UITableViewCell {
             todayCell.topConstraint.constant = todayCellTopConstraint ?? 0.0
         }
     }
+    var dismissCloseButtonAlpha: CGFloat? {
+        didSet {
+            closeButton.alpha = dismissCloseButtonAlpha ?? 0.0
+        }
+    }
+    var removeTodayCellBackgroundView: Bool? {
+        didSet {
+            if removeTodayCellBackgroundView == true {
+                todayCell.backgroundView = nil
+            }
+        }
+    }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

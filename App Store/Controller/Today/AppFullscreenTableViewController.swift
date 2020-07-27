@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AppFullScreenTableViewController: UITableViewController {
+class AppFullscreenTableViewController: UITableViewController {
     
     var dismissHandler: (()->Void)?
     
@@ -28,7 +28,7 @@ class AppFullScreenTableViewController: UITableViewController {
     }
 }
 
-extension AppFullScreenTableViewController {
+extension AppFullscreenTableViewController {
     
 //    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
 //        let headerView = TodayCollectionViewCell()
@@ -51,6 +51,8 @@ extension AppFullScreenTableViewController {
             headerCell.closeButtonPressed = { [weak self] in
                 self?.dismissHandler?()
             }
+            headerCell.clipsToBounds = true
+            headerCell.removeTodayCellBackgroundView = true
             return headerCell
         }
         let cell = AppFullScreenDescriptionTableViewCell()
@@ -62,5 +64,16 @@ extension AppFullScreenTableViewController {
             return TodayCollectionViewController.cellSize
         }
         return super.tableView(tableView, heightForRowAt: indexPath)
+    }
+}
+
+//MARK: - UIScrollViewDelegate
+extension AppFullscreenTableViewController {
+    
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y < 0 {
+            scrollView.isScrollEnabled = false
+            scrollView.isScrollEnabled = true //video 41 @07:00
+        }
     }
 }

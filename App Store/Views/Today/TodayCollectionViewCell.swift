@@ -25,6 +25,7 @@ class TodayCollectionViewCell: BaseTodayCollectionViewCell {
             descriptionLabel.text = item.description
             
             backgroundColor = item.backgroundColor
+            backgroundView?.backgroundColor = item.backgroundColor
         }
     }
     var topConstraint: NSLayoutConstraint!
@@ -33,9 +34,9 @@ class TodayCollectionViewCell: BaseTodayCollectionViewCell {
         super.init(frame: frame)
         backgroundColor = .white
         layer.cornerRadius = 16
-        clipsToBounds = true
         
         imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
         
         let imageContainerView = UIView()
         imageContainerView.addSubview(imageView)

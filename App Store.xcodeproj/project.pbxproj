@@ -30,7 +30,7 @@
 		E09020C724CD2DD7000161E8 /* ScreenshotCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09020C624CD2DD7000161E8 /* ScreenshotCollectionViewCell.swift */; };
 		E09020CA24CD3754000161E8 /* TodayCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09020C924CD3753000161E8 /* TodayCollectionViewController.swift */; };
 		E09020CD24CD3811000161E8 /* TodayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09020CC24CD3811000161E8 /* TodayCollectionViewCell.swift */; };
-		E09020CF24CD460B000161E8 /* AppFullScreenTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09020CE24CD460B000161E8 /* AppFullScreenTableViewController.swift */; };
+		E09020CF24CD460B000161E8 /* AppFullscreenTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09020CE24CD460B000161E8 /* AppFullscreenTableViewController.swift */; };
 		E09020D124CD489B000161E8 /* AppFullScreenDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09020D024CD489B000161E8 /* AppFullScreenDescriptionTableViewCell.swift */; };
 		E09020D324CD5402000161E8 /* AppFullScreenHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09020D224CD5402000161E8 /* AppFullScreenHeaderTableViewCell.swift */; };
 		E09020D624CE6A0C000161E8 /* TodayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09020D524CE6A0C000161E8 /* TodayItem.swift */; };
@@ -86,7 +86,7 @@
 		E09020C624CD2DD7000161E8 /* ScreenshotCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotCollectionViewCell.swift; sourceTree = "<group>"; };
 		E09020C924CD3753000161E8 /* TodayCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCollectionViewController.swift; sourceTree = "<group>"; };
 		E09020CC24CD3811000161E8 /* TodayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCollectionViewCell.swift; sourceTree = "<group>"; };
-		E09020CE24CD460B000161E8 /* AppFullScreenTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFullScreenTableViewController.swift; sourceTree = "<group>"; };
+		E09020CE24CD460B000161E8 /* AppFullscreenTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFullscreenTableViewController.swift; sourceTree = "<group>"; };
 		E09020D024CD489B000161E8 /* AppFullScreenDescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFullScreenDescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		E09020D224CD5402000161E8 /* AppFullScreenHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFullScreenHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		E09020D524CE6A0C000161E8 /* TodayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayItem.swift; sourceTree = "<group>"; };
@@ -212,7 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				E09020C924CD3753000161E8 /* TodayCollectionViewController.swift */,
-				E09020CE24CD460B000161E8 /* AppFullScreenTableViewController.swift */,
+				E09020CE24CD460B000161E8 /* AppFullscreenTableViewController.swift */,
 				E0E0963324CE9744002B10E1 /* TodayMultipleAppsCollectionViewController.swift */,
 				E0E0963724CEAFC7002B10E1 /* BackEnabledNavigationController.swift */,
 			);
@@ -508,7 +508,7 @@
 				E0DA936124CBD12C005C03E2 /* VerticalStackView.swift in Sources */,
 				E0691F9324CC8ECF00997DE2 /* HorizontalSnappingCollectionViewController.swift in Sources */,
 				E0DA936924CBE195005C03E2 /* Service.swift in Sources */,
-				E09020CF24CD460B000161E8 /* AppFullScreenTableViewController.swift in Sources */,
+				E09020CF24CD460B000161E8 /* AppFullscreenTableViewController.swift in Sources */,
 				E09020C024CD1742000161E8 /* ReviewsCollectionViewController.swift in Sources */,
 				E09020D124CD489B000161E8 /* AppFullScreenDescriptionTableViewCell.swift in Sources */,
 				E0E0963424CE9744002B10E1 /* TodayMultipleAppsCollectionViewController.swift in Sources */,

@@ -35,7 +35,6 @@ class TodayMultiAppCollectionViewCell: BaseTodayCollectionViewCell {
         super.init(frame: frame)
         backgroundColor = .white
         layer.cornerRadius = 16
-        clipsToBounds = true
         
         let stackView = VerticalStackView(arrangedSubviews: [
             categoryLabel,
