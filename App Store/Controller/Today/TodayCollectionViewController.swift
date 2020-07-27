@@ -214,7 +214,8 @@ class TodayCollectionViewController: BaseListCollectionViewController {
             }
             
             guard let cell = self.appFullscreenController.tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? AppFullScreenHeaderTableViewCell else { return }
-            cell.dismissCloseButtonAlpha = 0
+//            cell.dismissCloseButtonAlpha = 0
+            self.appFullscreenController.dismissCloseButtonAlpha = 0
             cell.todayCellTopConstraint = 24
             cell.layoutIfNeeded()
             

@@ -13,12 +13,7 @@ class AppFullScreenHeaderTableViewCell: UITableViewCell {
     let identifer = "AppFullScreenHeaderTableViewCell"
     
     private lazy var todayCell = TodayCollectionViewCell()
-    private lazy var closeButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setImage(#imageLiteral(resourceName: "close_button"), for: .normal)
-        button.addTarget(self, action: #selector(didTapCloseButton(_:)), for: .touchUpInside)
-        return button
-    }()
+    
     
     var closeButtonPressed: (() -> Void)?
     var item: TodayItem! {
@@ -38,11 +33,11 @@ class AppFullScreenHeaderTableViewCell: UITableViewCell {
             todayCell.topConstraint.constant = todayCellTopConstraint ?? 0.0
         }
     }
-    var dismissCloseButtonAlpha: CGFloat? {
-        didSet {
-            closeButton.alpha = dismissCloseButtonAlpha ?? 0.0
-        }
-    }
+//    var dismissCloseButtonAlpha: CGFloat? {
+//        didSet {
+//            closeButton.alpha = dismissCloseButtonAlpha ?? 0.0
+//        }
+//    }
     var removeTodayCellBackgroundView: Bool? {
         didSet {
             if removeTodayCellBackgroundView == true {
@@ -57,16 +52,16 @@ class AppFullScreenHeaderTableViewCell: UITableViewCell {
         addSubview(todayCell)
         todayCell.fillSuperview()
         
-        addSubview(closeButton)
-        closeButton.anchor(top: topAnchor, leading: nil, bottom: nil, trailing: trailingAnchor, padding: .init(top: 44, left: 0, bottom: 0, right: 12), size: .init(width: 80, height: 38))
+//        addSubview(closeButton)
+//        closeButton.anchor(top: topAnchor, leading: nil, bottom: nil, trailing: trailingAnchor, padding: .init(top: 44, left: 0, bottom: 0, right: 12), size: .init(width: 80, height: 38))
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    @objc private func didTapCloseButton(_ sender: UIButton) {
-        sender.isHidden = true
-        closeButtonPressed?()
-    }
+//    @objc private func didTapCloseButton(_ sender: UIButton) {
+//        sender.isHidden = true
+//        closeButtonPressed?()
+//    }
 }
