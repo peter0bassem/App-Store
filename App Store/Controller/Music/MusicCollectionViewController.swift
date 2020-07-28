@@ -68,8 +68,8 @@ extension MusicCollectionViewController {
         cell.track = results[indexPath.item]
         
         // initiate pagination
-        if indexPath.item == (results.count - 1) && !isPaginating {
-            print("Fetch more data")
+        if indexPath.item == (results.count - 3) && !isPaginating {
+//            print("Fetch more data")
             isPaginating = true
             let urlString = "http://itunes.apple.com/search?term=\(searchTerm)&offset=\(results.count)&limit=20"
             Service.shared.fetchGenericJSONData(urlString: urlString) { [weak self] (searchResults: SearchResult?, error: Service.ServiceError?) in
@@ -77,13 +77,13 @@ extension MusicCollectionViewController {
                     print(error)
                     return
                 }
-                
+
                 if searchResults?.results?.count == 0 {
                     self?.isDonePaginating = true
                 }
-                
-                sleep(2)
-                
+
+//                sleep(2)
+
                 guard let results = searchResults?.results else { return }
                 self?.results += results
                 DispatchQueue.main.async {
