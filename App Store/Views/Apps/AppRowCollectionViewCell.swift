@@ -25,6 +25,7 @@ class AppRowCollectionViewCell: UICollectionViewCell {
             companyLabel.text = result.artistName ?? ""
         }
     }
+    var getButtonPressed: (() -> Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -40,6 +41,7 @@ class AppRowCollectionViewCell: UICollectionViewCell {
         getButton.layer.cornerRadius = 32 / 2
         getButton.titleLabel?.font = .systemFont(ofSize: 16, weight: .bold)
         getButton.backgroundColor = UIColor(white: 0.95, alpha: 0.95)
+        getButton.addTarget(self, action: #selector(onGetButtonPressed(_:)), for: .primaryActionTriggered)
         
         let stackView = UIStackView(arrangedSubviews: [imageView, VerticalStackView(arrangedSubviews: [nameLabel, companyLabel], spacing: 4), getButton])
         stackView.alignment = .center
@@ -50,5 +52,9 @@ class AppRowCollectionViewCell: UICollectionViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    @objc private func onGetButtonPressed(_ sender: UIButton) {
+        getButtonPressed?()
     }
 }

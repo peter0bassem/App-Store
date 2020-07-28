@@ -12,7 +12,7 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 */
 
 import Foundation
-struct SocialApp : Codable {
+struct SocialApp : Codable, Hashable {
 	let id : String?
 	let name : String?
 	let imageUrl : String?
@@ -34,4 +34,10 @@ struct SocialApp : Codable {
 		tagline = try values.decodeIfPresent(String.self, forKey: .tagline)
 	}
 
+    init(id: String, name: String?, imageUrl: String?, tagline: String?) {
+        self.id = id
+        self.name = name
+        self.imageUrl = imageUrl
+        self.tagline = tagline
+    }
 }

@@ -28,7 +28,7 @@ class AppDetailsCollectionViewController: BaseListCollectionViewController {
         
         // Do any additional setup after loading the view.
         navigationItem.largeTitleDisplayMode = .never
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = .systemBackground
         collectionView.register(AppDetailsCollectionViewCell.self, forCellWithReuseIdentifier: AppDetailsCollectionViewCell.identifier)
         collectionView.register(PreviewCollectionViewCell.self, forCellWithReuseIdentifier: PreviewCollectionViewCell.identifier)
         collectionView.register(ReviewRowCollectionViewCell.self, forCellWithReuseIdentifier: ReviewRowCollectionViewCell.identifier)

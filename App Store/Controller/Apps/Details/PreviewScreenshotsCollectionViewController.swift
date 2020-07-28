@@ -21,7 +21,7 @@ class PreviewScreenshotsCollectionViewController: HorizontalSnappingCollectionVi
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = .systemBackground
         collectionView.register(ScreenshotCollectionViewCell.self, forCellWithReuseIdentifier: ScreenshotCollectionViewCell.identifer)
         collectionView.contentInset = .init(top: 0, left: 16, bottom: 0, right: 16)
         collectionView.showsHorizontalScrollIndicator = false

@@ -82,8 +82,8 @@ extension TodayMultipleAppsCollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let appId = apps[indexPath.item].id ?? ""
-        let appDetailsCollectionViewController = AppDetailsCollectionViewController(appId: appId)
+        let appId = apps[indexPath.item].id
+        let appDetailsCollectionViewController = AppDetailsCollectionViewController(appId: appId ?? "")
         navigationController?.pushViewController(appDetailsCollectionViewController, animated: true)
     }
 }

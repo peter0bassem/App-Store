@@ -48,7 +48,9 @@ class ReviewCollectionViewCell: UICollectionViewCell {
         layer.cornerRadius = 16
         clipsToBounds = true
         
+        titleLabel.textColor = .black
         authorLabel.textColor = .lightGray
+        bodyLabel.textColor = .black
         
         let stackView = VerticalStackView(arrangedSubviews: [
             UIStackView(arrangedSubviews: [
