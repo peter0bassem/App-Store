@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ScreenshotCollectionViewCell: UICollectionViewCell {
     
@@ -16,6 +17,7 @@ class ScreenshotCollectionViewCell: UICollectionViewCell {
     
     var imageUrlString: String! {
         didSet {
+            imageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
             imageView.sd_setImage(with: URL(string: imageUrlString))
         }
     }
@@ -23,7 +25,7 @@ class ScreenshotCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        imageView.backgroundColor = .purple
+//        imageView.backgroundColor = .purple
         imageView.contentMode = .scaleAspectFill
         addSubview(imageView)
         imageView.fillSuperview()

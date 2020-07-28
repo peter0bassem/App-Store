@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class MultipleAppCollectionViewCell: UICollectionViewCell {
     
@@ -24,6 +25,7 @@ class MultipleAppCollectionViewCell: UICollectionViewCell {
     
     var result: GamesResults! {
         didSet {
+            imageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
             imageView.sd_setImage(with: URL(string: result.artworkUrl100 ?? ""))
             nameLabel.text = result.name ?? ""
             companyLabel.text = result.artistName ?? ""
@@ -33,7 +35,7 @@ class MultipleAppCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        imageView.backgroundColor = .purple
+//        imageView.backgroundColor = .purple
         imageView.constrainWidth(constant: 64)
         imageView.constrainHeight(constant: 64)
         

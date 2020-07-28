@@ -57,16 +57,20 @@ class SearchResultCollectionViewCell: UICollectionViewCell {
     var appResult: Results! {
         didSet {
             guard let appIconUrl = URL(string: appResult.artworkUrl100 ?? "") else { return }
+            appIconImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
             appIconImageView.sd_setImage(with: appIconUrl)
             nameLabel.text = appResult.trackName ?? ""
             categoryLabel.text = appResult.primaryGenreName ?? ""
             ratingsLabel.text = "Rating: " + String((appResult.averageUserRating ?? 0.0).roundToPlaces(places: 1))
             
+            screenshot1ImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
             screenshot1ImageView.sd_setImage(with: URL(string: appResult.screenshotUrls?[0] ?? ""))
             if appResult.screenshotUrls?.count ?? 0 > 1 {
+                screenshot2ImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
                 screenshot2ImageView.sd_setImage(with: URL(string: appResult.screenshotUrls?[1] ?? ""))
             }
             if appResult.screenshotUrls?.count ?? 0 > 2 {
+                screenshot3ImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
                 screenshot3ImageView.sd_setImage(with: URL(string: appResult.screenshotUrls?[2] ?? ""))
             }
         }

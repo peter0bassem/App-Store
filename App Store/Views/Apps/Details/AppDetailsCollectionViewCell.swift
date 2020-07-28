@@ -22,6 +22,7 @@ class AppDetailsCollectionViewCell: UICollectionViewCell {
     var app: Results! {
         didSet {
             guard let app = app else { return }
+            appIconImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
             appIconImageView.sd_setImage(with: URL(string: app.artworkUrl100 ?? ""))
             nameLabel.text = app.trackName ?? ""
             priceButton.setTitle(app.formattedPrice ?? "", for: .normal)
@@ -33,7 +34,7 @@ class AppDetailsCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        appIconImageView.backgroundColor = .red
+//        appIconImageView.backgroundColor = .red
         appIconImageView.constrainWidth(constant: 140)
         appIconImageView.constrainHeight(constant: 140)
         

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class TrackCollectionViewCell: UICollectionViewCell {
     
@@ -18,6 +19,7 @@ class TrackCollectionViewCell: UICollectionViewCell {
     
     var track: Results! {
         didSet {
+            imageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
             imageView.sd_setImage(with: URL(string: track.artworkUrl100 ?? ""))
             nameLabel.text = track.trackName ?? ""
             subtitleLabel.text = "\(track.artistName ?? "") • \(track.collectionName ?? "")"
@@ -27,7 +29,7 @@ class TrackCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        imageView.image = #imageLiteral(resourceName: "garden")
+//        imageView.image = #imageLiteral(resourceName: "garden")
         imageView.constrainWidth(constant: 80)
         
         let stackView = UIStackView(arrangedSubviews: [
